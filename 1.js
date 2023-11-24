@@ -1,6 +1,19 @@
-function isEven(number) {
-    return number % 2 === 0;
-}
+const temperatures = [3,-2,-6,-1,'error',9, 13, 17, 15, 14, 9, 5];
 
-console.log(isEven(4));
-console.log(isEven(5)); 
+
+const calcTempAmplitude = function (temps) {
+    let max = temps[0];
+    let min = temps[0];
+    for (let i = 0; i < temps.length; i++) {
+        const curTemp = temps[i];
+        if (curTemp > max) max =curTemp;
+        if (curTemp < min) min = curTemp;
+    }
+    console.log(max, min);
+};
+calcTempAmplitude([3,7,4])
+
+
+// const array = [1, 2, 3, 4, 5];
+// const maxValue = Math.max(...array);
+// console.log(maxValue); 
